@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Общежитие №2 — Вход</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-body">
+  <div class="auth-container fade-in">
+    <h1 class="auth-title">Общежитие №2</h1>
+    <p class="auth-subtitle">Акмуллинский университет, г. Уфа</p>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="login">Вход</button>
+      <button class="tab" data-tab="register">Регистрация</button>
+    </div>
+
+    <!-- Форма входа -->
+    <form id="login-form" class="form active">
+      <input type="text" id="login-username" placeholder="Логин" required />
+      <input type="password" id="login-password" placeholder="Пароль" required />
+      <button type="submit" class="btn-primary">Войти</button>
+    </form>
+
+    <!-- Форма регистрации -->
+    <form id="register-form" class="form">
+      <select id="register-role" required>
+        <option value="student">Студент</option>
+        <option value="admin">Администратор</option>
+      </select>
+
+      <input type="text" id="register-name" placeholder="ФИО" required />
+      <input type="text" id="register-username" placeholder="Логин" required />
+      <input type="password" id="register-password" placeholder="Пароль" required />
+
+      <div id="student-fields">
+        <input type="text" id="register-group" placeholder="Группа" />
+        <input type="text" id="register-room" placeholder="Комната" />
+      </div>
+
+      <div id="admin-fields" class="hidden">
+        <input type="text" id="register-position" placeholder="Должность" />
+      </div>
+
+      <button type="submit" class="btn-primary">Зарегистрироваться</button>
+    </form>
+
+    <!-- Подсказка для тестового входа -->
+    <div class="auth-hint">
+      Тестовый вход: student / 1 или admin / 1
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <script type="module" src="./js/auth.js"></script>
+</body>
+</html>

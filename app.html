@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Общежитие №2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      🏢 <span>Общежитие №2</span>
+    </div>
+
+    <nav id="nav-menu" class="nav"></nav>
+
+    <div class="header-right">
+      <span id="user-name"></span>
+      <button id="logout-btn" class="btn-outline btn-logout" data-tooltip="Выйти из системы">Выйти</button>
+      <button id="theme-toggle" class="ghost-btn" data-tooltip="Сменить тему">🌙</button>
+      <button id="burger" class="burger">☰</button>
+    </div>
+  </header>
+
+  <main id="app" class="main"></main>
+
+  <footer class="footer">
+    <div>
+      <strong>Общежитие №2</strong><br>
+      БГПУ, г. Уфа
+    </div>
+    <div>
+      Комендант: +7 (347) 000-00-00<br>
+      Вахта: +7 (347) 000-00-01
+    </div>
+    <div>
+      Общежитие: 6:00–23:00<br>
+      Кухня: 6:00–22:30<br>
+      Уборка: 22:30–23:00
+    </div>
+  </footer>
+
+  <div id="toast-container"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
